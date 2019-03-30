@@ -39,17 +39,18 @@ class Xfoot extends Component{
                     icon:'smile'
                 }
             ],
-            current:'1'
+            current:'Home',
         }
     }
     handleClick = (e) => {        
         this.setState({
-          current: e.key,
+          current: e.key
         },
-        ()=>{
+        ()=>{       
+            console.log('click ', e,e.key,5555,this.state.current);
             this.props.history.push('/' + e.key.toLowerCase())           
         });
-        console.log('click ', e,e.key,6666,this.state.current);
+        // console.log('click ', e,e.key,6666,this.state.current);
     }
     render(){
         return (            

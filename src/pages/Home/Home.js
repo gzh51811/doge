@@ -1,10 +1,9 @@
 import React,{Component}  from 'react';
 
-import Xfoot from '../../Component/footer';
 import './home.css';
 
 let Home =()=>{
-    return <div>首页<Xfoot></Xfoot></div>
+    return <div>首页</div>
 }
 
 export default Home;
