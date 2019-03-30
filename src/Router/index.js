@@ -6,9 +6,8 @@ import List from '../pages/List/List';
 import Goods from '../pages/Goods/Goods';
 import Cart from '../pages/Cart/Cart';
 import Mine from '../pages/Mine/Mine';
+import Xfoot from '../Component/footer';
 
-
-import { Menu, Icon } from 'antd';
 
 
 
@@ -53,44 +52,20 @@ class myRouter extends Component{
             current:'Home'
         }
     }
-    handleClick = (e) => {
-        // console.log('click ', e,'this',this);
-        this.setState({
-          current: e.key,
-        },
-        ()=>{
-            this.props.history.push('/' + e.key.toLowerCase())
-        });
-    }
     render(){
-        return (
-            <div className='container'>
-                <Menu 
-                    onClick={this.handleClick} 
-                    selectedKeys={[this.state.current]} 
-                    mode='horizontal'
-                >
-                    {
-                        this.state.navs.map(item=>
-                            <Menu.Item key={item.name}>
-                                <Icon type={item.icon}/>
-                                {item.text}
-                            </Menu.Item>)
-                    }
-                </Menu>
-                <Switch>
+        return (          
+            <Switch>
                     <Route path='/home' component={Home}/>
                     <Route path='/list' component={List}/>
                     <Route path='/goods' component={Goods}/>
                     <Route path='/cart' component={Cart}/>
-                    <Route path='/meng' render={()=><div>萌爪联盟</div>}/>
-                    <Route path='/mine' component={Register}/>
+                    <Route path='/meng' render={()=><div>萌爪联盟<Xfoot></Xfoot></div>}/>
+                    <Route path='/mine' component={Mine}/>
                     <Route path='/register' component={Register}/>
                     <Route path='/login' component={Login}/>
                     <Redirect from='/' to='/home' exact/>
                     <Redirect to="/404"/>
                 </Switch>
-            </div>
         )
     }
 }

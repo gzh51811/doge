@@ -3,7 +3,6 @@ import React,{Component}  from 'react';
 import { Input, Icon } from 'antd';
 
 import './register.css';
-import './all.css';
 
 
 class Register extends Component{

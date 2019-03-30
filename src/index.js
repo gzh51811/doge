@@ -7,6 +7,10 @@ import { HashRouter} from 'react-router-dom';
 
 
 
+import '../src/pages/all.css';
+
+
+
 
 
 
