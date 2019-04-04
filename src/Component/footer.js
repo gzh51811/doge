@@ -52,24 +52,34 @@ class Xfoot extends Component{
         });
         // console.log('click ', e,e.key,6666,this.state.current);
     }
-    render(){
-        return (            
-            <div className='container'>
-                <Menu 
-                    onClick={this.handleClick} 
-                    selectedKeys={[this.state.current]} 
-                    mode='horizontal'
-                >
-                    {
-                        this.state.navs.map(item=>
-                            <Menu.Item key={item.name}>
-                                <Icon type={item.icon}/>
-                                {item.text}
-                            </Menu.Item>)
-                    }
-                </Menu>                
-            </div>
-        )
+
+    render(){ 
+        let { location } = this.props
+        let pathArr = ['/login','/register'];
+        if(pathArr.indexOf(location.pathname) === -1){
+            return (            
+                <div className='container'>
+                    <Menu 
+                        onClick={this.handleClick} 
+                        selectedKeys={[this.state.current]} 
+                        mode='horizontal'
+                    >
+                        {
+                            this.state.navs.map(item=>
+                                <Menu.Item key={item.name}>
+                                    <Icon type={item.icon}/>
+                                    {item.text}
+                                </Menu.Item>)
+                        }
+                    </Menu>                
+                </div>
+            )
+        }else{
+            return (            
+                <div className='container'></div>
+            )
+        }
+        
     }
 }
 
