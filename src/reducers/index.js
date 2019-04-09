@@ -9,4 +9,4 @@ const rootReducers = combineReducers({
     cart: cartReducer
 });
 
-export default rootReducers;
+export default rootReducers; 

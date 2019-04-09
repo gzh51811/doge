@@ -10,6 +10,7 @@ var router = new Router();
 const loginRouter = require('./login');
 const tokenverifyRouter = require('./tokenverify');
 const cartRouter = require('./cart');
+const regRouter = require('./reg');
 
 
 
@@ -38,6 +39,7 @@ router.use('/', koaBody({
 router.use('/login',loginRouter.routes());
 router.use('/tokenverify',tokenverifyRouter.routes());
 router.use('/cart',cartRouter.routes());
+router.use('/reg',regRouter.routes());
 
 
 module.exports = router;
