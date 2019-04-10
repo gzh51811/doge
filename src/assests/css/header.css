@@ -1,0 +1,12 @@
+.boforechangeheader{
+    height: 0px;
+    transition: all .5s  ease-in-out;
+    /*display:none;*/
+
+}
+
+.afterchangeheader{
+    height:68px;
+    display:block;
+    transition: all .5s  ease-in-out;
+}
