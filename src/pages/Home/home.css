@@ -32,11 +32,14 @@
 }
 
 /* 首页第一个轮播图 */
+.lbt .slick-slide{
+    height: 290px !important;
+}
+
 .ant-carousel .slick-slide {
     text-align: center;
-    height: 18.125rem;
+    /* height: 290px; */
     line-height: 18.128rem;
-    /* background: #CC3333; */
     overflow: hidden;
   }
   .ant-carousel .slick-slide img{
@@ -46,7 +49,9 @@
   .ant-carousel .slick-slide h3 {
     color: #fff;
   }
-  
+  .sousuo .search{
+      background: #ffffff00 !important;
+  }
   .sousuo{
     position: fixed;
     height: 6.25rem;
@@ -72,8 +77,12 @@
     background: rgba(255,255,255,0.8);
     
 }
+.search{
+    background: #ffffff00;
+}
 .round30{
     border-radius: 30px;
+    height: 30px;
 }
 
 .it1{
@@ -380,6 +389,13 @@ img{
     height: 390px!important;
     margin-bottom: 20px;
 }
+.lbt2 .ant-carousel .slick-slider{
+    height: 390px;
+    width: 375px;
+}
+.ant-carousel .slick-slider{
+    width: 375px;
+}
 .lbt2 .ant-carousel .slick-initialized .slick-slide{
     height: 390px;
 }
@@ -431,8 +447,9 @@ img{
 .lbt3{
     margin-bottom: 35px;
 }
-
-
+/* .lbt3 .ant-carousel{
+    height: 100px !important;
+} */
 /* 轮播图4 */
 .lbt4 .ant-carousel .slick-initialized .slick-slide{
     height: 180px;
@@ -940,4 +957,8 @@ img{
 .square_goods .goodlist ul li .Interest{
     height: 18px;
     line-height: 18px;
+}
+/*  */
+.ant-carousel .slick-slide{
+    background: #fff !important;
 }

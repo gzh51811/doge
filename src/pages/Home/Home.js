@@ -1,5 +1,5 @@
-// import React,{Component}  from 'react';
-import React from 'react';
+import React,{Component}  from 'react';
+
 
 import './home.css';
 
@@ -31,12 +31,15 @@ class Home extends Component{
 
     return ( <div className="niubi">
         {/* 首页第一个轮播图 */}
-         <Carousel autoplay={this.onChange}>
+        <div className="lbt">
+        <Carousel autoplay={this.onChange}>
          <div><img src="http://img2.epetbar.com/2019-04/03/20/bce86b46965eb2222dcc3644f71ef8c1.jpg?x-oss-process=style/water" /></div>
           <div><img src="http://img2.epetbar.com/2019-03/29/10/6a238ac221fd3b23e9f42556c526edc7.jpg?x-oss-process=style/water"/></div>
           <div><img src="http://img2.epetbar.com/2019-03/29/20/6ce47685dd778fb1756d0d2a8f092da8.jpg?x-oss-process=style/water"/></div>
           <div><img src="http://img2.epetbar.com/2019-03/22/11/fa16ebbf8a57d217eda19ff89448d824.jpg?x-oss-process=style/water"/></div>
          </Carousel>
+        </div>
+         
 
          <div className="sousuo">
               <div className="flixt pl15 search pr15 pl15  flex">
@@ -1155,9 +1158,9 @@ class Home extends Component{
                                   <img className="vux-x-img goodimg db b-loaded" id="vux-ximg-zgyws"  src="https://img1.epetbar.com/2017-05/16/10/71ba11c54a09089be25f45a31feb430c.jpg?x-oss-process=style/fill&$1=200&$2=200"/>
                                   <div className="ft12 c333 mt5 mb5 title el2">新西兰原装进口KIWI KITCHENS  鱼肉配方冻干宠物食品 900g</div>
                                   <div className="flex flex-ac flex-pj">
-                                  <span data-v-0c7bc348="" class="cf0 nft10 bold ntf10 mt3">¥<span data-v-0c7bc348="" class="ft14">500.00</span></span>
+                                  <span data-v-0c7bc348="" className="cf0 nft10 bold ntf10 mt3">¥<span data-v-0c7bc348="" className="ft14">500.00</span></span>
                                   </div>
-                                  <div data-v-0c7bc348="" class="Interest"> </div>
+                                  <div data-v-0c7bc348="" className="Interest"> </div>
                                 </a>
                             </div>
                             <div className="cart flex flex-ac flex-pc">
@@ -1174,9 +1177,9 @@ class Home extends Component{
                                   <img className="vux-x-img goodimg db b-loaded" id="vux-ximg-zgyws"  src="https://img1.epetbar.com/2017-05/16/10/71ba11c54a09089be25f45a31feb430c.jpg?x-oss-process=style/fill&$1=200&$2=200"/>
                                   <div className="ft12 c333 mt5 mb5 title el2">新西兰原装进口KIWI KITCHENS  鱼肉配方冻干宠物食品 900g</div>
                                   <div className="flex flex-ac flex-pj">
-                                  <span data-v-0c7bc348="" class="cf0 nft10 bold ntf10 mt3">¥<span data-v-0c7bc348="" class="ft14">500.00</span></span>
+                                  <span data-v-0c7bc348="" className="cf0 nft10 bold ntf10 mt3">¥<span data-v-0c7bc348="" className="ft14">500.00</span></span>
                                   </div>
-                                  <div data-v-0c7bc348="" class="Interest"> </div>
+                                  <div data-v-0c7bc348="" className="Interest"> </div>
                                 </a>
                             </div>
                             <div className="cart flex flex-ac flex-pc">
@@ -1206,9 +1209,9 @@ class Home extends Component{
                                   <img className="vux-x-img goodimg db b-loaded" id="vux-ximg-zgyws"  src="https://img1.epetbar.com/2017-05/16/10/71ba11c54a09089be25f45a31feb430c.jpg?x-oss-process=style/fill&$1=200&$2=200"/>
                                   <div className="ft12 c333 mt5 mb5 title el2">新西兰原装进口KIWI KITCHENS  鱼肉配方冻干宠物食品 900g</div>
                                   <div className="flex flex-ac flex-pj">
-                                  <span data-v-0c7bc348="" class="cf0 nft10 bold ntf10 mt3">¥<span data-v-0c7bc348="" class="ft14">500.00</span></span>
+                                  <span data-v-0c7bc348="" className="cf0 nft10 bold ntf10 mt3">¥<span data-v-0c7bc348="" className="ft14">500.00</span></span>
                                   </div>
-                                  <div data-v-0c7bc348="" class="Interest"> </div>
+                                  <div data-v-0c7bc348="" className="Interest"> </div>
                                 </a>
                             </div>
                             <div className="cart flex flex-ac flex-pc">
@@ -1225,9 +1228,9 @@ class Home extends Component{
                                   <img className="vux-x-img goodimg db b-loaded" id="vux-ximg-zgyws"  src="https://img1.epetbar.com/2017-05/16/10/71ba11c54a09089be25f45a31feb430c.jpg?x-oss-process=style/fill&$1=200&$2=200"/>
                                   <div className="ft12 c333 mt5 mb5 title el2">新西兰原装进口KIWI KITCHENS  鱼肉配方冻干宠物食品 900g</div>
                                   <div className="flex flex-ac flex-pj">
-                                  <span data-v-0c7bc348="" class="cf0 nft10 bold ntf10 mt3">¥<span data-v-0c7bc348="" class="ft14">500.00</span></span>
+                                  <span data-v-0c7bc348="" className="cf0 nft10 bold ntf10 mt3">¥<span data-v-0c7bc348="" className="ft14">500.00</span></span>
                                   </div>
-                                  <div data-v-0c7bc348="" class="Interest"> </div>
+                                  <div data-v-0c7bc348="" className="Interest"> </div>
                                 </a>
                             </div>
                             <div className="cart flex flex-ac flex-pc">
