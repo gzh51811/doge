@@ -1,15 +1,10 @@
 import React  from 'react';
-import '../assests/css/header.css';
-
-// header-quick header-quicknew Jtk
-// style={{display:isshow}}
-
-let Xhead =({isshow,istrue})=>{
-    // isshow  'header-quick', 'header-quicknew', 'Jtk',  
-
+let Xhead =(state)=>{
+    // console.log('header',state)
+    let {showMore} = state;
     return (
-        <div className={[istrue?"afterchangeheader":"boforechangeheader"].join(' ')} >
-            <a href="https://wap.epet.com/">
+        <div className={['header-quick', 'header-quicknew','Jtk',showMore && 'headHide'].join(' ')}>
+            <a href="javascript:;">
                 <span className="icon1"></span>
                 <p>首页</p>
             </a>
@@ -19,7 +14,7 @@ let Xhead =({isshow,istrue})=>{
             </a>
             <a href="https://wap.epet.com/cart/">
                 <span className="icon4" id="getCartNum"></span>
-                <p >购物车</p>
+                <p>购物车</p>
             </a>
             <a href="https://wap.epet.com/app/user">
                 <span className="icon5"></span>

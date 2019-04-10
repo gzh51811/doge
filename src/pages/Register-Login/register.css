@@ -37,4 +37,22 @@
 } */
 .header[data-v-b773d4b4] span{
     margin-left:9rem;
+
+}
+
+#alertwin{
+    position: absolute;
+    top:0;
+    height:100%;
+    width: 100%;
+    background:rgba(0,0,0,.25);
+    z-index:10;
+}
+
+.ant-alert-with-description {
+    position: absolute;
+    top: 162px;
+    z-index: 12;
+    width: 60%;
+    left: 21%;
 }
