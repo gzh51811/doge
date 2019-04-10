@@ -20,22 +20,8 @@ class Mine extends Component {
                 <p>注册</p>
 
             </div>
-
-
-
-
-
-
-
-
-
         );
     }
-
-
-
-
-
 }
 Mine=withRouter(Mine);
 export default Mine;

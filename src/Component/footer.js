@@ -53,26 +53,6 @@ class Xfoot extends Component{
         });
 
     }
-    //showComponentUpdate componentWillMount
-    // componentDidMount(){
-    //     let {location}=this.props;
-    //     let currentpath=location.pathname.slice(1);
-    //     console.log(currentpath);
-    //     console.log('对比前',this.refs.currentdom.props.selectedKeys);
-    //     this.refs.currentdom.props.selectedKeys[0]=currentpath;
-    //     this.setState({
-    //         current:currentpath
-    //     }); 
-    //     console.log('对比后',this.refs.currentdom.props.selectedKeys);
-
-
-       
-       
-    //     // this.setState({
-    //     //     current:currentpath
-    //     // }); 
-    //     // console.log('当前current',this.state.current);
-    // }
     render(){ 
         let { location } = this.props;
         let pathArr = ['/login','/register','/details?:gid','/goods','/cart','/mine'];

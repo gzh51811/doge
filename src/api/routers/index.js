@@ -13,7 +13,7 @@ const cartRouter = require('./cart');
 const goodslistRouter = require('./goodslist');
 const listdetailRouter = require('./listDetail.js');
 const addtocartRouter = require('./addtocart.js');
-
+const regRouter = require('./reg');
 
 
 
@@ -45,6 +45,7 @@ router.use('/cart',cartRouter.routes());
 router.use('/goodslist',goodslistRouter.routes());
 router.use('/listdetail',listdetailRouter.routes());
 router.use('/addtocart',addtocartRouter.routes());
+router.use('/reg',regRouter.routes());
 
 
 module.exports = router;
