@@ -1,6 +1,6 @@
 .ant-input-affix-wrapper .ant-input:not(:first-child) {
     height: 3rem;
-    padding-left: 45px;
+    padding-left: 51px;
 }
 .ant-input-affix-wrapper .ant-input:not(:last-child) {
     padding-right: 30px;
@@ -25,16 +25,16 @@
 }
 .header[data-v-b773d4b4] {
     border-radius: 4px;
-    background: #CC3333;
+    /* background: #CC3333; */
     line-height: 51px;
-    color: #fff;
+    color: #666;
     font-size: 1.5rem;
 }
-.header .iconfont{
+/* .header .iconfont{
     float:left;
     color: #fff;
     padding-left: 1rem;
-}
+} */
 .header[data-v-b773d4b4] span{
-    margin-left:9.5rem;
+    margin-left:9rem;
 }
