@@ -105,7 +105,7 @@ class Cart extends Component{
         // console.log('mycartlist',mycartlist)
         let {goods_qty,goods_id} = mycartlist[idx];
         goods_qty++;        
-        this.props.axios.get('http://localhost:3001/cart',{
+        this.props.axios.get('http://47.107.182.207:3002/cart',{
             params:{
                 type:'ChangeCartQty',
                 goods_id,
@@ -145,7 +145,7 @@ class Cart extends Component{
         let goods_ids = JSON.stringify(my_goods_ids)
 
         console.log('1111',my_goods_ids)
-        this.props.axios.get('http://localhost:3001/cart',{
+        this.props.axios.get('http://47.107.182.207:3002/cart',{
             params:{
                 type:'RemoveGoods',
                 goods_ids,
@@ -161,7 +161,7 @@ class Cart extends Component{
         
     }
     componentWillMount(){       
-        this.props.axios.get('http://localhost:3001/cart',{
+        this.props.axios.get('http://47.107.182.207:3002/cart',{
             params:{
                 type:'CheckAll'
             }
@@ -202,7 +202,7 @@ class Cart extends Component{
                         <span className="mla pull-right Jbur ml J_bur right-more" onClick={this.isShow.bind(this)}></span>
                         </div>
                     </header>                   
-                    <Xhead {...this.state}></Xhead>
+                    <Xhead {...this.props} {...this.state}></Xhead>
                     
                 </div>
         
@@ -221,7 +221,7 @@ class Cart extends Component{
                                                     <div className="spli1 rela">
                                                         <div className="cart-img rela overflow loadimg-fixed">
                                                             <a href="javascript:;" className="block">
-                                                                <img src={require('../../asset/cart/' + item.goods_imgurl)} className="image"/>
+                                                                <img src={item.goods_imgurl} className="image"/>
                                                             </a>
                                                         </div>
                                                         <div className="cart-font pr">

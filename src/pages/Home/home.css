@@ -31,14 +31,22 @@
     border-bottom:2px solid #CC3333;
 }
 
+/* ====================================== */
 /* 首页第一个轮播图 */
+.leftimg img{
+    width: 160px;
+}
+.rightimg img{
+    width: 60px;
+}
+
 .lbt .slick-slide{
     height: 290px !important;
 }
 
 .ant-carousel .slick-slide {
     text-align: center;
-    /* height: 290px; */
+    /* height: 200px!important; */
     line-height: 18.128rem;
     overflow: hidden;
   }
@@ -899,3 +907,15 @@ img{
 .ant-carousel .slick-slide{
     background: #fff !important;
 }
+
+/* .ant-carousel .slick-slide {
+    text-align: center;
+    height: 160px;
+    line-height: 160px;
+    background: #364d79;
+    overflow: hidden;
+  } */
+
+
+
+

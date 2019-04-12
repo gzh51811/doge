@@ -1,3 +1,14 @@
+// import React,{Component}  from 'react';
+// import React from 'react';
+
+// import './home.css';
+
+// let Home =()=>{
+//     return <div>首页</div>
+// }
+
+// export default Home;
+
 import React,{Component}  from 'react';
 
 
@@ -17,7 +28,7 @@ import { Carousel } from 'antd';
 class Home extends Component{
   constructor(){
     super();
-    state:{
+    this.state={
 
     }
   }
@@ -46,7 +57,7 @@ class Home extends Component{
                     <a className="db it1 bgfff80 round30 mr15">
                       <div className="flixt1">
                         <img src="assets/img/sousuo.png" className="searchimg dib ml15"/>
-                        <span className="dib ft12 c666">
+                        <span className="dib ft12 c666" style={{width:"275px"}}>
                          请输入搜索内容  
                         </span>
                       </div>

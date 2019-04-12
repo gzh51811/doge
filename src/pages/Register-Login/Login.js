@@ -14,7 +14,6 @@ class Login extends Component {
             psw:'',
             rednone:false
         }
-
     }
     loginchange(fntype,e){
         if(fntype=='loginuser'){
@@ -22,29 +21,18 @@ class Login extends Component {
                 uname:e.target.value
             },()=>{
                 this.judgeinput();
-
-            })
-           
-
+            })         
         }
         else if(fntype=='loginpassword'){
             this.setState({
                 psw:e.target.value
             },()=>{
                 this.judgeinput();
-
-            })
-            
-
-            
+            })         
         }
-
-        
-
     }
     judgeinput(){
-        if(this.state.uname&&this.state.psw){
-            
+        if(this.state.uname&&this.state.psw){      
             this.setState({
                 rednone:true
             });
@@ -54,55 +42,47 @@ class Login extends Component {
                 rednone:false
             });
         }
-
     }
     tologin(){
         if(this.state.uname&&this.state.psw){
             // console.log('登录');
             var params = new URLSearchParams();
             params.append('user',this.state.uname);
-            params.append('password',this.state.psw);
-            
-
+            params.append('password',this.state.psw);         
             this.props.axios({
                 method: "post",
-                url: "http://localhost:3001/login",
+                url: "http://47.107.182.207:3002/login",
                 data: params
             }).then(res => {
-                console.log('数据',res);
+                // console.log('数据',res);
                 if(res){
                     var userobj ={};
                     userobj["token"] = res.data.token;
                     userobj["uname"] = res.data.uname;
                     // userobj["logintime"] = res.data.logintime;
-
                     localStorage.setItem( "user", JSON.stringify(userobj) );
                     this.props.history.push('/home');
-
-                }
-        
-        
-        
+                }    
             });
-
-            
-
-
-
         }
         else{
             alert(11)
         }
         
     }
+    goBack(){
+        this.props.history.goBack();  
+    }
     render(){
         return(
             <div data-v-b742e1ea="" id="register" className="router-view">
                 <div data-v-b773d4b4="" data-v-b742e1ea="" className="header topbar"> 
-                    <div data-v-b773d4b4="" className="normal-header">
-                        <a data-v-b773d4b4="" href="###" className="back-btn top-bar-btn">
-                            <i data-v-b773d4b4="" className="iconfont"><b>&lt;</b></i>
-                        </a> 
+                    <div data-v-b773d4b4="" className="">
+                        <a 
+                            href="javascript:void(0)" 
+                            className="aback page-top go-back left-more"
+                            onTouchEnd={this.goBack.bind(this)}
+                        ></a> 
                         <span data-v-b773d4b4="">登录</span>
                     </div>
                 </div>
@@ -129,11 +109,7 @@ class Login extends Component {
                 
             </div>      
         )
-}
-
-
-
-
+    }
 
 
 }

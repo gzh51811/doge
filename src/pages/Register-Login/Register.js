@@ -98,7 +98,7 @@ class Register extends Component{
             params.append('pwd',this.state.password);
             this.props.axios({
                 method: "post",
-                url: "http://localhost:3001/reg",
+                url: "http://47.107.182.207:3002/reg",
                 data: params
             }).then(res => {
                 // console.log(res)
@@ -127,7 +127,7 @@ class Register extends Component{
         return (
             <div data-v-b742e1ea="" id="register" className="router-view">
                 <div data-v-b773d4b4="" data-v-b742e1ea="" className="header topbar head-top"> 
-                    <div data-v-b773d4b4="" className="normal-header">
+                    <div data-v-b773d4b4="" className="">
                         <a 
                             href="javascript:void(0)" 
                             className="aback page-top go-back left-more"

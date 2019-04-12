@@ -13,7 +13,7 @@ input.inputStyle[data-v-cd5f8684] {
     background: #fff;
     line-height: 50px;
     color: #333;
-    position: relative;
+    position: relative; 
 }
 
 .headerBoxFixed .header[data-v-433477a2] {
@@ -1975,10 +1975,10 @@ table{border-collapse:collapse;empty-cells:show;}
 
 /*头部页面题目栏*/
 .head-top{height:50px;line-height:50px;position:relative;padding:0 1em;border-bottom:1px solid #f3f3f3;}
-.head-top .aback{background:url(https://static.epetbar.com/mpet/images/personal-bico1.png) no-repeat;background-size:9px 17px;display:block;width:22px;height:20px;position:absolute;margin-top:16px;}
-.head-top .zfont{position:absolute;right:2.5em;top:0;}
-.head-top.zcolor{color:#333;}
-.head-top .topbar-link{color:#333;}
+ .aback{background:url(https://static.epetbar.com/mpet/images/personal-bico1.png) no-repeat;background-size:9px 17px;display:block;width:22px;height:20px;position:absolute;margin-top:16px;}
+ .zfont{position:absolute;right:2.5em;top:0;}
+.zcolor{color:#333;}
+ .topbar-link{color:#333;}
 .topbar-title{width:90%;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;display:inline-block;margin:0 auto;}
 
 /*底部样式*/
@@ -1990,9 +1990,6 @@ table{border-collapse:collapse;empty-cells:show;}
 .footer .ft span{ padding-right:10px}
 .back-top{ position: fixed; right: .8em; bottom: 10em; width: 4.45em; height: 4.45em; background: url(https://static.epetbar.com/mpet/images/top.png); background-size: 100% auto;}
 .back-home{ position: fixed; right: .8em; bottom: 5em; width: 4.45em; height: 4.45em; background: url(https://static.epetbar.com/mpet/images/home.png); background-size: 100% auto;}
-
-/*红色按钮*/
-.btn-a{background:#f03e3e;border-radius:5px;width:85%;height:40px;line-height:40px;}
 
 /*单选按钮样式*/
 .radiobox {width:100%;position:relative}

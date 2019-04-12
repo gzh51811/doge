@@ -411,10 +411,10 @@ html,body{
     z-index:100;
     background:purple;
 }*/
-/* .slideshow,.ant-carousel,.slick-slide{
+.detail .slideshow,.detail .ant-carousel,.detail .slick-slide{
     width: 360px;
     height: 360px !important;
-} */
+}
 .slideshow img{
     width: 360px;
     height: 360px;

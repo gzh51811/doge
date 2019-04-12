@@ -44,7 +44,7 @@ class Details extends Component {
         // console.log(this.props,);
         let gid=this.props.match.params.gid.split('=')[1];
         // axios
-        this.props.axios.get('http://localhost:3001/listdetail',{
+        this.props.axios.get('http://47.107.182.207:3002/listdetail',{
             params:{
                 gid
 
@@ -109,7 +109,7 @@ class Details extends Component {
         params.append('goods_qty',goods_qty);
         this.props.axios({
             method: "post",
-            url: "http://localhost:3001/addtocart",
+            url: "http://47.107.182.207:3002/addtocart",
             data: params
         }).then(res => {
                 console.log('数据',res);
@@ -139,7 +139,9 @@ class Details extends Component {
         console.log(123456789);
         this.props.history.push('/cart');
     }
-
+    handleBackClick(){
+        this.props.history.goBack(); 
+    }
    
     render(){
         // console.log(this.state.data)
@@ -149,9 +151,9 @@ class Details extends Component {
                 <div className="wap-top-bar hide" style={{display: "block"}}>
                     <header className="ftc head-top bgfff zcolor rela">
                     <div className="">
-                    <a href="###" className="aback page-top go-back left-more">
+                    <a href="javascript:;" className="aback page-top go-back left-more"  onClick={this.handleBackClick.bind(this)}>
                     </a>
-                    <span className="ft18 topbar-title" style={{display: "block"}}><div className="tabtop ft18 ftc"><span className="active">商品</span><a href="javascript:void(0);"><span>详情{this.state.isok}</span></a><a href="javascript:void(0);"><span>评价</span></a></div></span>
+                    <span className="topbar-title" style={{display: "block"}}><div className="tabtop ft18 ftc"><span className="active">商品</span><a href="javascript:void(0);"><span>详情{this.state.isok}</span></a><a href="javascript:void(0);"><span>评价</span></a></div></span>
                     <div className="zfont ft16 block">
                     <a className="zcolor topbar-link goods-tracks gico" >
                     &nbsp;&nbsp; </a>

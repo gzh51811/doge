@@ -17,6 +17,6 @@ app.use(routers.routes());
 
 
 // 监听端口
-app.listen(3001,()=>{
-    console.log('server is running on http://localhost:3001');
+app.listen(3002,()=>{
+    console.log('server is running on http://localhost:3002');
 })

@@ -16,8 +16,8 @@ class Xfoot extends Component{
             },
             {
                 text:'分类',
-                name:'List',
-                path:'/list',
+                name:'Goods',
+                path:'/goods',
                 icon:'bars'
             },
             {
@@ -55,7 +55,7 @@ class Xfoot extends Component{
     }
     render(){ 
         let { location } = this.props;
-        let pathArr = ['/login','/register','/details?:gid','/goods','/cart','/mine'];
+        let pathArr = ['/login','/register','/details/:gid','/goods','/cart'];
         if(pathArr.indexOf(location.pathname) === -1){
             return ( 
                 <div className='container footershow' style={{height:'58px'}}>

@@ -4,20 +4,30 @@ import './Good.css';
 //引入高阶组件
 import withAxios from '../../hoc/withAxios.js';
 import { withRouter } from 'react-router-dom';
-
+import Xhead from '../../Component/header';
 import imgURL from '../../assests/img/loading.gif';
 
 
 
 class Goods extends Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {
+            showMore:true,
             contentClass:"conditionArea",
             isScrollTop : true,
             loading:false,
             goodsArr:[]
         };
+    }
+    handleBackClick(){
+        this.props.history.goBack(); 
+    }
+    isShow(){ 
+        this.setState({
+            showMore : !this.state.showMore
+        })
+        
     }
     // async 
     componentWillMount(){
@@ -45,7 +55,7 @@ class Goods extends Component {
 
         // 异步操作
         
-        this.props.axios.get('http://localhost:3001/goodslist',{
+        this.props.axios.get('http://47.107.182.207:3002/goodslist',{
 
         }).then(res=>{
             console.log(res.data.data);
@@ -57,7 +67,7 @@ class Goods extends Component {
                    loading:true,
                    goodsArr:res.data.data
                 })
-                console.log(666)
+                // console.log(666)
 
             },400);
            
@@ -92,7 +102,7 @@ class Goods extends Component {
     // 跳转详情页
     jumpDetail=(currentDataId)=>{
        // console.log(currentDataId,this.props.history);
-        this.props.history.push({pathname:`/details?gid=${currentDataId}`}) ;
+        this.props.history.push({pathname:`/details/gid=${currentDataId}`}) ;
 
     }
     
@@ -101,17 +111,22 @@ class Goods extends Component {
         return (
             <div className='goodslist'>
                 <div className="wap-top-bar hide" style={{display: "block"}}>
-                        <header className="ftc head-top bgfff zcolor rela">
+                    <header className="ftc bgfff zcolor rela">
                         <div className="">
-                        <a href="###" className="aback page-top go-back left-more">
-                        </a>
-                        <span className="ft18 topbar-title" style={{display: "block"}}><div className="tabtop ft18 ftc"><span style={{color:'#000'}}>商品列表</span></div></span>
-                       
-                        <span className="mla pull-right Jbur ml J_bur right-more" >
-                        </span>
+                            <a href="javascript:;" className="aback page-top go-back left-more" onClick={this.handleBackClick.bind(this)}></a>
+                            <span className="ft18 topbar-title" style={{display: "block"}}>
+                                <div className="tabtop ftc">
+                                    <span style={{color:'#000'}}>商品列表</span>
+                                </div>
+                            </span>        
+                            <span className="mla pull-right Jbur ml J_bur right-more" onClick={this.isShow.bind(this)}></span>
                         </div>
-                        </header>              
+                        <Xhead {...this.state}></Xhead>
+                    </header>              
                 </div>
+                
+                
+                
                 <main className='showlist'>
                     
                     {
@@ -131,7 +146,7 @@ class Goods extends Component {
                                     </li>
                                     <li className="fl ftc w25"><a href="javascript:;" className="db rela ft14"><span>销量</span></a>
                                     </li>
-                                    <li className="fl ftc w25 select3"><a href="javascript:;" className="db rela ft14 arrow-down arrow-default"><span>价格</span></a> 
+                                    <li className="fl ftc w25"><a href="javascript:;" className="db rela ft14 arrow-default"><span>价格</span></a> 
                                     </li>
                                     <li className="fl ftc select4 w25"><a href="javascript:;" className="rela ft14">筛选</a>
                                     </li>
